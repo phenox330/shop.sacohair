@@ -5,33 +5,77 @@
   <title>Saco France — Bientôt en ligne</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Saco France — nouvelle boutique bientôt en ligne.">
-  <link rel="canonical" href="https://saco-france.fr">
+  <link rel="canonical" href="https://saco-france.fr/password">
   <style>
-    html,body {height:100%;margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;background:#0b0c0d;color:#f2f2f2;}
-    .wrap{min-height:100%;display:flex;align-items:center;justify-content:center;padding:24px}
-    .card{max-width:720px;text-align:center}
-    .title{font-size:clamp(28px,4vw,40px);line-height:1.25;margin:0 0 16px}
-    .lead{opacity:.8;margin:0 0 28px}
-    .link{display:inline-block;padding:12px 18px;border:1px solid #3a3f47;border-radius:999px;text-decoration:none;color:#fff}
-    .link:hover{background:#15181d}
-    .rule{height:1px;background:#2a2f36;margin:28px 0}
-    .muted{font-size:14px;opacity:.6}
+    :root{
+      --bg: #ffffff;
+      --card: #f7f6f9;
+      --text: #2f2621;
+      --border: #e6e3ea;
+      --accent: #2f2621; /* sobre, même teinte */
+    }
+    * { box-sizing: border-box; }
+    html,body { height:100%; margin:0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
+      display:flex; align-items:center; justify-content:center; padding:24px;
+    }
+    .card {
+      width: 100%;
+      max-width: 720px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0,0,0,.06);
+      padding: 32px 28px;
+      text-align: center;
+    }
+    .title { 
+      font-size: clamp(28px, 4vw, 40px); 
+      line-height: 1.25; 
+      margin: 0 0 12px; 
+      color: var(--text);
+    }
+    .lead { 
+      margin: 0 0 24px; 
+      opacity: .9; 
+      color: var(--text);
+    }
+    .link-btn {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 999px;
+      border: 1px solid var(--accent);
+      color: var(--text);
+      text-decoration: none;
+      transition: transform .15s ease, background .2s ease;
+      background: #fff;
+    }
+    .link-btn:hover { 
+      background: #f0eef3; 
+      transform: translateY(-1px);
+    }
+    .rule { height:1px; background: var(--border); margin: 24px 0; }
+    .muted { font-size: 14px; opacity: .85; }
+    .inline-link { 
+      color: var(--text); 
+      text-decoration: underline; 
+      text-underline-offset: 2px; 
+    }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <main class="card">
-      <h1 class="title">Ouverture prochaine</h1>
-      <p class="lead">Votre boutique revient très vite.</p>
-      <a class="link" href="https://saco-france.fr/password" target="_blank" rel="noopener">saco-france.fr</a>
-      <div class="rule"></div>
-      <p class="muted">
-        Besoin d’aide ?
-      <a class="link" style="padding:0;border:none" href="mailto:contact@saco-france.fr">
-      contact@saco-france.fr
-      </a>
-  </p>
-</main>
-  </div>
+  <main class="card">
+    <h1 class="title">Ouverture prochaine</h1>
+    <p class="lead">Votre boutique revient très vite.</p>
+
+    <a class="link-btn" href="https://saco-france.fr/password" target="_blank" rel="noopener noreferrer">
+      saco-france.fr
+    </a>
+
+    <div class="rule"></div>
+  </main>
 </body>
 </html>
